@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../../../assignment/CSS-Framework/pos/assests/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            background: url("assests/cal-bg.webp");
+            background-size: cover;
+            background-position: center;
+        }
+        body>section{
+            height: 550px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-radius: 3%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 2px solid white;
+        }
+        #input{
+            width: 100%;
+            height: 65px;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: right;
+        }
+        #calRow>div>div>button{
+            height: 80px;
+            width: 103px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #buttonC{
+            height: 65px;
+            width: 93px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #buttonCBg{
+            width: 93px;
+            border-radius: 7px;
+        }
+        #calRow>div>div{
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <form class="row container text-center ms-0 mt-3" id="inputBar">
+        <div class="col-3">
+            <div class="bg-light mt-2 " id="buttonCBg">
+                <button id="buttonC" type="reset" class="btn btn-danger" form="inputBar" >C</button>
+            </div>
+        </div>
+        <div class="col-9">
+            <input class="form-control form-control-lg mt-2" type="text" aria-label=".form-control-lg example" id="input">
+        </div>
+    </form>
+    <!--    <h1 id="display">0</h1>-->
+    <div class="container text-center">
+        <div class="row row-cols-4 row-cols-lg-4 g-2 g-lg-3 mt-2 ms-0 me-0" style="height: 440px" id="calRow">
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="7" onclick="function7()">7</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="8" onclick="function8()">8</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light" >
+                    <button type="button" class="btn btn-outline-dark" id="9" onclick="function9()">9</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-success" id="plus">+</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="4" onclick="function4()">4</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="5" onclick="function5()">5</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light" >
+                    <button type="button" class="btn btn-outline-dark" id="6" onclick="function6()">6</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-success" id="minus">-</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="1" onclick="function1()">1</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="2" onclick="function2()">2</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light" >
+                    <button type="button" class="btn btn-outline-dark" id="3" onclick="function3()">3</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-success" id="division">/</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="point" onclick="fnPoint()">.</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-dark" id="0" onclick="function0()">0</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light" >
+                    <button type="button" class="btn btn-outline-success" id="equal" >=</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-light">
+                    <button type="button" class="btn btn-outline-success" id="multiply" >x</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<script src="../../CSS-Framework/pos/assests/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
+<script src="../QUE/JQuery/jquery-3.6.1.min.js"></script>
+<script>
+
+    // ===================number buttons=========================
+
+    function function0(){
+        let first = $("#input").val();
+        $("#input").val(first+0);
+    }
+
+    function function1(){
+        let first = $("#input").val();
+        $("#input").val(first+1);
+    }
+
+    function function2(){
+        let first = $("#input").val();
+        $("#input").val(first+2);
+    }
+
+    function function3(){
+        let first = $("#input").val();
+        $("#input").val(first+3);
+    }
+
+    function function4(){
+        let first = $("#input").val();
+        $("#input").val(first+4);
+    }
+
+    function function5(){
+        let first = $("#input").val();
+        $("#input").val(first+5);
+    }
+
+    function function6(){
+        let first = $("#input").val();
+        $("#input").val(first+6);
+    }
+
+    function function7(){
+        let first = $("#input").val();
+        $("#input").val(first+7);
+    }
+
+    function function8(){
+        let first = $("#input").val();
+        $("#input").val(first+8);
+    }
+
+    function function9(){
+        let first = $("#input").val();
+        $("#input").val(first+9);
+    }
+
+    function fnPoint(){
+        let first = $("#input").val();
+        $("#input").val(first+".");
+
+    }
+
+    // ===================symbol buttons=========================
+
+    let op;
+    let firstNum;
+
+    $("#plus").click(function () {
+        firstNum = $("#input").val();
+
+        let previous =firstNum
+        let clear =previous.slice(0,0);
+        $("#input").val(clear);
+        op = "plus"
+    });
+
+    $("#minus").click(function () {
+        firstNum = $("#input").val();
+
+        let previous =firstNum
+        let clear =previous.slice(0,0);
+        $("#input").val(clear);
+        op = "minus"
+    });
+
+    $("#division").click(function () {
+        firstNum = $("#input").val();
+
+        let previous =firstNum
+        let clear =previous.slice(0,0);
+        $("#input").val(clear);
+        op = "division"
+    });
+
+    $("#multiply").click(function () {
+        firstNum = $("#input").val();
+
+        let previous =firstNum
+        let clear =previous.slice(0,0);
+        $("#input").val(clear);
+        op = "multiply"
+    });
+
+
+
+    //==================== equal button==========================
+    $("#equal").click(function (){
+        let secondNum = $("#input").val();
+        if (op == "plus"){
+            $("#input").val(parseInt(firstNum) + parseInt(secondNum));
+        }
+        if (op == "minus"){
+            $("#input").val(parseInt(firstNum) - parseInt(secondNum));
+        }
+        if (op == "division"){
+            $("#input").val(parseInt(firstNum) / parseInt(secondNum));
+        }
+        if (op == "multiply"){
+            $("#input").val(parseInt(firstNum) * parseInt(secondNum));
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Case One</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body > section {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        body>section>section{
+            width: 50%;
+            height: 50%;
+            position: absolute;
+        }
+        section>section:nth-child(1){
+            left: 0;
+            top: 0;
+            background: red;
+        }
+        section>section:nth-child(2){
+            right: 0;
+            top: 0;
+            background: green;
+        }
+        section>section:nth-child(3){
+            right: 0;
+            bottom: 0;
+            background: deeppink;
+        }
+        section>section:nth-child(4){
+            left: 0;
+            bottom: 0;
+            background: orange;
+        }
+        section>section>div{
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        section>section>div>div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body>section>div{
+            width: 200px;
+            height: 200px;
+            background: white;
+            position: absolute;
+        }
+
+        body>section>div:nth-child(5){
+            left: 0;
+            top: 0;
+            border-bottom-right-radius: 100%;
+        }
+        body>section>div:nth-child(6){
+            right: 0;
+            top: 0;
+            border-bottom-left-radius: 100%;
+        }
+
+        body>section>div:nth-child(7){
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 100%;
+        }
+
+        body>section>div:nth-child(8){
+            left: 0;
+            bottom: 0;
+            border-top-right-radius: 100%;
+        }
+
+        body>section>div:nth-child(9){
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100px;
+            margin: auto;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+
+        body>section>div:nth-child(10){
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 100px;
+            margin: auto;
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+        }
+
+        body>section>div:nth-child(11){
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        body>section>div>div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background: red;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</section>
+<section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+        <div>
+            <div></div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

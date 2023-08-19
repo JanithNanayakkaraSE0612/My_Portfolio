@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assests/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <nav id="navbar" class="navbar navbar-expand navbar-light shadow " style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a id="navbarText" class="navbar-brand fw-bold" href="#">
+                <img id="logo" src="../assests/img/milkbarlogo.png" alt="" width="40" height="30" class="d-inline-block align-text-top fw-bolder">
+                MilkBar POS System
+            </a>
+            <form class="d-flex">
+                <div>
+                    <button id="signUpBtn" type="button" class="col-12 btn btn-sm  btn-primary shadow-lg" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Sign Up
+                    </button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-primary" id="exampleModalLabel2">Sign Up</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-12">
+                                            <label for="inputUserID" class="form-label">User ID :</label>
+                                            <input type="text" class="form-control" id="inputUserID" placeholder="U001">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputUserName" class="form-label">Usename :</label>
+                                            <input type="email" class="form-control" id="inputUserName" placeholder="janith">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputEmail" class="form-label">E-mail :</label>
+                                            <input type="text" class="form-control" id="inputEmail" placeholder="janithnanayakkara0202@gmail.com">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="inputPw" class="form-label">Password :</label>
+                                            <input type="password" class="form-control" id="inputPw" placeholder="****">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="col-2 btn btn-danger " data-bs-dismiss="modal">Clear</button>
+                                    <button type="button" class="col-3 btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="logOutBtn" class="btn btn-sm btn-danger me-3" type="button"><a href="../index.html" class="text-decoration-none text-white">Log Out</a></button>
+            </form>
+        </div>
+    </nav>
+
+    <section class="container-fluid flex-wrap">
+        <section id="content" class="row  justify-content-between">
+            <div class="col-4 border rounded-3 border shadow-lg bg-body">
+                <h3 id="custmers" class="text-center mt-3 shadow">Customers</h3>
+                <div>
+                    <button id="addcustomerBtn" type="button" class="col-12 btn btn btn-primary fw-bolder mt-4 shadow-lg" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                        Add New Customer
+                    </button>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-primary" id="exampleModalLabel1">Add New Customer</h5>
+                                    <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-12">
+                                            <label for="inputID" class="form-label">Customer ID :</label>
+                                            <input type="text" class="form-control" id="inputID" placeholder="C001">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputName" class="form-label">Name :</label>
+                                            <input type="text" class="form-control" id="inputName" placeholder="janith">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Address :</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="Galle">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputTelephone" class="form-label">Telephone :</label>
+                                            <input type="text" class="form-control" id="inputTelephone" placeholder="0765739535">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="col-2 btn btn-danger " >Clear</button>
+                                    <button type="button" class="col-3 btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="customerDetailsBtn"  type="submit" class="btn btn text-white bg-success col-12 mt-4 fw-bolder shadow-lg"><a href="customer.html" class="text-decoration-none text-white ">Update/ View Details</a></button>
+            </div>
+            <div class="col-4 border border shadow-lg rounded-3 bg-body">
+                <h3 id="items" class="text-center mt-3 shadow">Items</h3>
+                <div>
+                    <button id="item" type="button" class="col-12 btn btn btn-primary fw-bolder mt-4 shadow-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add New Item
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-primary" id="exampleModalLabel">Add New Item</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-12">
+                                            <label for="inputItemCode" class="form-label">Item Code :</label>
+                                            <input type="text" class="form-control" id="inputItemCode" placeholder="I001">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputItemName" class="form-label">Description :</label>
+                                            <input type="text" class="form-control" id="inputItemName" placeholder="FreshMilk">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputPrice" class="form-label">Unit Price :</label>
+                                            <input type="text" class="form-control" id="inputPrice" placeholder="150.00">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputQtyOnHand" class="form-label">Qty On Hand :</label>
+                                            <input type="number" class="form-control" id="inputQtyOnHand" placeholder="200">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="col-2 btn btn-danger " >Clear</button>
+                                    <button type="button" class="col-3 btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="itemDetailsBtn"  type="submit" class="btn btn text-white bg-success col-12 mt-4 fw-bolder shadow-lg"><a href="item.html" class="text-decoration-none text-white">Update/ View Details</a></button>
+            </div>
+            <div class="col-4 border border shadow-lg rounded-3 bg-body">
+                <h3 id="orders" class="text-center mt-3 shadow">Orders</h3>
+                <button  id="purchaseBtn" type="submit" class="btn btn bg-primary mt-4 col-12 text-white fw-bolder shadow-lg"><a
+                        href="../page/PlaceOrder.html" class="text-decoration-none text-white ">Purchase Order</a></button>
+                <button id="orderDetails" type="submit" class="btn btn text-white bg-success col-12 mt-4 fw-bolder shadow-lg"><a href="order.html" class="text-decoration-none text-white">View Details</a></button>
+            </div>
+        </section>
+    </section> <link rel="stylesheet" href="../assests/fonts/css/all.min.css">
+    <link rel="stylesheet" href="../assests/css/style.css">
+</head>
+<body>
+
+
+<script src="../assests/bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

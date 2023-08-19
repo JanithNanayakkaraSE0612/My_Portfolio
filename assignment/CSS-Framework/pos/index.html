@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assests/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/fonts/css/all.min.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+<body>
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light shadow " style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="assests/img/milkbarlogo.png" alt="" width="42" height="32" class="d-inline-block align-text-top fw-bolder">
+                MilkBar POS System
+            </a>
+            <form class="d-flex">
+                <button type="button" class="col-12 btn btn-sm btn-primary shadow-lg" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Sign Up
+                </button>
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-primary" id="exampleModalLabel1">Sign Up</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="inputID" class="form-label">User ID :</label>
+                                        <input type="password" class="form-control" id="inputID" placeholder="U001">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputName" class="form-label">Usename :</label>
+                                        <input type="email" class="form-control" id="inputName" placeholder="Janith">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">E-mail :</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="janithnanayakkara0202@gmail.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputTelephone" class="form-label">Password :</label>
+                                        <input type="text" class="form-control" id="inputTelephone" placeholder="****">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="col-2 btn btn-danger " data-bs-dismiss="modal">Clear</button>
+                                <button type="button" class="col-3 btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+</section>
+<section id="logIn" class="border border-primary border rounded-3 p-3 shadow-lg">
+    <form>
+        <div>
+            <h3 class="text-center fw-bold text-primary">Sign In</h3>
+        </div>
+        <div class="mb-3 mt-5">
+            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button id="btn" type="submit" class=" btn btn-primary"><a href="page/dashbord.html" class="text-decoration-none text-white ">Log In</a></button>
+    </form>
+</section>
+
+<script src="assests/bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
